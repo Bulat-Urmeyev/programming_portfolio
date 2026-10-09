@@ -2,7 +2,7 @@
 
 ![Calculator](https://github.com/Bulat-Urmeyev/programming_portfolio/blob/main/images/Calc%20Screenshot.png?raw=true)
 
-[Link to source code](https://github.com/Bulat-Urmeyev/programming_portfolio/blob/main/src/Calculator/Calculator.pde)
+[Link to source code](https://github.com/Bulat-Urmeyev/programming_portfolio/tree/main/src/Calculator)
 
 ## Overview
 [Write 2–3 sentences explaining what you are building
