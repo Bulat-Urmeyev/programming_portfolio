@@ -2,6 +2,8 @@
 
 ![Calculator](https://github.com/Bulat-Urmeyev/programming_portfolio/blob/main/images/Screenshot%20Calc.png?raw=true)
 
+[Link to source code](https://github.com/Bulat-Urmeyev/programming_portfolio/blob/main/src/Calculator/Calculator.pde)
+
 ## Overview
 [Write 2–3 sentences explaining what you are building
 and what a user can do with it.]
