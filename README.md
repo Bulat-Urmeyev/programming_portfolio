@@ -5,16 +5,15 @@
 [Link to source code](https://github.com/Bulat-Urmeyev/programming_portfolio/tree/main/src/Calculator)
 
 ## Overview
-[Write 2–3 sentences explaining what you are building
-and what a user can do with it.]
+Users can enter expressions using their keyboard or on-screen buttons to calculate immediate answers.
 
 ## Current Status
 Working:
-- [A feature you have tested]
-- [Another feature you have tested]
+- Factorials
+- Tangent
 
 Still in progress:
-- [A requirement you are finishing]
+- More Useful Buttons
 
 ## How to Run
 Built with Processing.
