@@ -1,6 +1,6 @@
 ## OOP Calculator for Programming
 
-![Calculator](https://github.com/Bulat-Urmeyev/programming_portfolio/blob/main/images/Screenshot%20Calc.png?raw=true)
+![Calculator]([https://github.com/Bulat-Urmeyev/programming_portfolio/blob/main/images/Screenshot%20Calc.png?raw=true](https://github.com/Bulat-Urmeyev/programming_portfolio/blob/main/images/Calc%20Screenshot.png?raw=true))
 
 [Link to source code](https://github.com/Bulat-Urmeyev/programming_portfolio/blob/main/src/Calculator/Calculator.pde)
 
