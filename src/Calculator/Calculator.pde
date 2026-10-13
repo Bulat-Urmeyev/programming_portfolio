@@ -41,7 +41,7 @@ void setup() {
   opButtons[8] = new Button(180, 340, 50, 50, '=');
   opButtons[9] = new Button(60, 400, 50, 50, '√');
   opButtons[10] = new Button(180, 400, 50, 50, '!');
-  opButtons[11] = new Button(240, 400, 50, 50, 'T');
+  opButtons[11] = new Button(240, 400, 50, 50, 'π');
 }
 
 void draw() {
@@ -218,13 +218,10 @@ void handleEvent(char val, boolean isNum) {
       }
       if (displayVal.length() > 8) displayVal = displayVal.substring(0, 8);
       newEntry = true;
-    } else if (clicked == 'T') {
+    } else if (clicked == 'π') {
       if (left) {
-        l = tan(l);
+        l = 3.141592;
         displayVal = str(l);
-      } else {
-        r = tan(r);
-        displayVal = str(r);
       }
       if (displayVal.length() > 8) displayVal = displayVal.substring(0, 8);
       newEntry = true;
