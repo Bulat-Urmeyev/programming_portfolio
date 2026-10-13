@@ -9,11 +9,11 @@ Users can enter expressions using their keyboard or on-screen buttons to calcula
 
 ## Current Status
 Working:
-- Factorials
-- Tangent
+- Factorial
+- Exponent
 
 Still in progress:
-- More Useful Buttons
+- Making more buttons
 
 ## How to Run
 Built with Processing.
