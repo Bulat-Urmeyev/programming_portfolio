@@ -1,4 +1,4 @@
-// Bulat Urmeyev | 15 Sept 2026 | Calculator //<>//
+// Bulat Urmeyev | 15 Sept 2026 | Calculator
 Button[] numButtons = new Button[10];
 Button[] opButtons = new Button[12];
 float l, r, result;
@@ -60,10 +60,19 @@ void draw() {
 
 void drawDisplay() {
   rectMode(CENTER);
-  rect(120, 60, 160, 80);
+  rect(120, 70, 170, 75);
   fill(1);
-  textSize(45);
-  text(displayVal, 120, 70);
+  textSize(40);
+  textAlign(RIGHT, CENTER);
+  text(displayVal, 195, 68);
+}
+
+boolean checkLength() {
+  if (displayVal.length() < 8) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 void mouseReleased() {
@@ -98,6 +107,9 @@ void performCalc() {
     result = pow(l, r);
   }
   displayVal = str(result);
+  if (displayVal.length() > 8) {
+    displayVal = displayVal.substring(0, 8);
+  }
   left = true;
   l = result;
   newEntry = true;
@@ -135,6 +147,8 @@ void keyPressed() {
     handleEvent('=', false);
   } else if (keyCode == 106) {
     handleEvent('x', false);
+  } else if (keyCode == 110 || keyCode == 46) {
+    handleEvent('.', false);
   }
 }
 
@@ -145,7 +159,11 @@ void handleEvent(char val, boolean isNum) {
       displayVal = digit;
       newEntry = false;
     } else {
-      displayVal += digit;
+      if (checkLength()) {
+        displayVal += digit;
+      } else {
+        // limit reached: do nothing
+      }
     }
 
     if (left) {
@@ -171,6 +189,7 @@ void handleEvent(char val, boolean isNum) {
         r *= -1;
         displayVal = str(r);
       }
+      if (displayVal.length() > 8) displayVal = displayVal.substring(0, 8);
     } else if (clicked == 'C') {
       l = 0.0;
       r = 0.0;
@@ -187,6 +206,7 @@ void handleEvent(char val, boolean isNum) {
         r = sqrt(r);
         displayVal = str(r);
       }
+      if (displayVal.length() > 8) displayVal = displayVal.substring(0, 8);
       newEntry = true;
     } else if (clicked == 'S') {
       if (left) {
@@ -196,6 +216,7 @@ void handleEvent(char val, boolean isNum) {
         r = sin(r);
         displayVal = str(r);
       }
+      if (displayVal.length() > 8) displayVal = displayVal.substring(0, 8);
       newEntry = true;
     } else if (clicked == 'T') {
       if (left) {
@@ -205,6 +226,7 @@ void handleEvent(char val, boolean isNum) {
         r = tan(r);
         displayVal = str(r);
       }
+      if (displayVal.length() > 8) displayVal = displayVal.substring(0, 8);
       newEntry = true;
     } else if (clicked == '!') {
       if (left) {
@@ -214,10 +236,14 @@ void handleEvent(char val, boolean isNum) {
         r = calcFactorial(int(r));
         displayVal = str(r);
       }
+      if (displayVal.length() > 8) displayVal = displayVal.substring(0, 8);
       newEntry = true;
     } else if (clicked == '.') {
       if (!displayVal.contains(".")) {
-        displayVal += ".";
+        if (checkLength()) {
+          displayVal += ".";
+        } else {
+        }
       }
     }
   }
